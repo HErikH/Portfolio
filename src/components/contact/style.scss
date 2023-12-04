@@ -1,0 +1,109 @@
+@use '../../mixins.scss' as *;
+
+.contact {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 1000px;
+  margin: auto;
+  gap: 50px;
+  @include tablet {
+    gap: 35px;
+    padding: 0 50px;
+  }
+  @include mobile {
+    gap: 0;
+    width: 100%;
+    padding: 0 10px;
+    flex-direction: column;
+  }
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include tablet {
+      justify-content: center;
+      gap: 20px;
+      text-align: center;
+      align-items: center;
+    }
+    @include mobile {
+      margin-top: 50px;
+    }
+    h1 {
+      font-size: 100px;
+      line-height: 88px;
+      @include tablet {
+        font-size: 36px;
+        line-height: 50px;
+      }
+    }
+    span {
+      font-weight: 300;
+    }
+    .cv-download {
+        padding: 20px;
+        border: none;
+        font-size: 15px;
+        color: black;
+        background-color: orange;
+        cursor: pointer;
+        font-weight: 500;
+        @include mobile {
+          padding: 10px;
+        }
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+    position: relative;
+    @include mobile {
+      padding: 50px;
+      width: 100%;
+    }
+    .phoneSvg {
+      stroke: orange;
+      position: absolute;
+      margin: auto;
+      z-index: -1;
+      svg {
+        width: 450px;
+        height: 450px;
+        @include tablet {
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      input,
+      textarea {
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 5px;
+        @include tablet {
+          padding: 10px;
+        }
+      }
+      button {
+        padding: 20px;
+        border: none;
+        font-size: 15px;
+        color: black;
+        background-color: orange;
+        cursor: pointer;
+        font-weight: 500;
+        @include mobile {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
