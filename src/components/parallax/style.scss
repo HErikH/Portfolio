@@ -1,4 +1,4 @@
-@use '../../mixins.scss' as *;
+@use "../../mixins.scss" as *;
 
 .parallax {
   position: relative;
@@ -20,7 +20,7 @@
     width: 100%;
     height: 100%;
     z-index: 3;
-    background-image: url("/public/mountains.png");
+    background-image: url("/mountains.png");
     background-size: cover;
     background-position: bottom;
     @include mobile {
@@ -29,7 +29,7 @@
     }
   }
   .planets {
-    background-image: url("/public/sun.png");
+    background-image: url("/sun.png");
     position: absolute;
     width: 100%;
     height: 100%;
@@ -46,7 +46,7 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-image: url("/public/stars.png");
+    background-image: url("/stars.png");
     background-size: cover;
     background-position: bottom;
   }
