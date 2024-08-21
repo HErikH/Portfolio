@@ -32,10 +32,9 @@ function About() {
         }}
       >
         Hi I'm Erik Frontend developer but also have experience with the MERN stack<br />
-        I've been in this field for a year and a half,<br /> 
-        and I strengthened my skills as a Frontend developer in Startup<br />
-        and as a team player too I'm looking for an opportunity<br /> 
-        to become as role beginner developer.
+        I've been in this field for two year,<br /> 
+        and I strengthened my skills as a Frontend developer in Startup <br />
+        and now continue to become more professional in the BoomTech as a Junior Frontend developer<br />
       </motion.span>
 
       <motion.div className="skills">

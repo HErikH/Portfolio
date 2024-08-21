@@ -75,7 +75,7 @@ function Hero() {
         WEB DEVELOPER
       </motion.div>
       <div className="imageContainer">
-        <img src="/hero.png" alt="" />
+        <img src="/hero.jpeg" alt="" />
       </div>
     </div>
   );
