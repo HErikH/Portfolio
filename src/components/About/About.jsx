@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
-import { skillsIcons } from "../../data/data"
+import { skillsIcons } from "../../data/data";
 import "./style.scss";
 
 let variants = {
   visible: {
     x: 0,
     opacity: 1,
-    transition: { staggerChildren: 0.06 }
+    transition: { staggerChildren: 0.06 },
   },
-  hidden: { 
+  hidden: {
     x: -100,
-    opacity: 0
-  }
-}
+    opacity: 0,
+  },
+};
 
 function About() {
   return (
@@ -31,27 +31,37 @@ function About() {
           duration: 1,
         }}
       >
-        Hi I'm Erik Frontend developer but also have experience with the MERN stack<br />
-        I've been in this field for two year,<br /> 
-        and I strengthened my skills as a Frontend developer in Startup <br />
-        and now continue to become more professional in the BoomTech as a Junior Frontend developer<br />
+        Hi I'm Erik Frontend Developer with two years of experience, specializing in<br />
+        building user-friendly and scalable web applications. Strong expertise<br />
+        in React and modern frontend technologies, with hands- on experience in<br />
+        the MERN stack. Passionate about improving UI/UX and creating efficient,<br />
+        maintainable code. Contributed to high-quality projects at BoomTech,<br />
+        refining my skills and expertise in frontend development. <br />
+        <br />
       </motion.span>
 
       <motion.div className="skills">
         <p>My skills</p>
-        <motion.div 
-        className="skills__icons" 
-        initial='hidden' 
-        whileInView='visible' 
-        variants={variants}
+        <motion.div
+          className="skills__icons"
+          initial="hidden"
+          whileInView="visible"
+          variants={variants}
         >
-        {skillsIcons.map((icon, index) => {
-          return ( 
-          icon == 'BEM' ?
-          <motion.span variants={variants} key={icon}>{icon}</motion.span> :
-          <motion.img variants={variants} key={icon} src={icon} alt="icon" />
-          )
-        })}
+          {skillsIcons.map((icon, index) => {
+            return icon == "BEM" ? (
+              <motion.span variants={variants} key={icon}>
+                {icon}
+              </motion.span>
+            ) : (
+              <motion.img
+                variants={variants}
+                key={icon}
+                src={icon}
+                alt="icon"
+              />
+            );
+          })}
         </motion.div>
       </motion.div>
     </div>

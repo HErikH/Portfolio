@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import { portfolioData } from '../../data/data'
+import { portfolioData } from "../../data/data";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import './style.scss'
+import "./style.scss";
 
 const Single = ({ item }) => {
   const ref = useRef();
@@ -19,11 +19,14 @@ const Single = ({ item }) => {
           <div className="imageContainer" ref={ref}>
             <img src={item.img} alt="" />
           </div>
-          <motion.div className="textContainer" style={{y}}>
+          <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item?.text}</p>
-            {item?.url &&
-            <a target="_blank" href={item?.url} rel="noreferrer">See Demo</a>}
+            {item?.url && (
+              <a target="_blank" href={item?.url} rel="noreferrer">
+                {item?.urlText || "See Demo"}
+              </a>
+            )}
           </motion.div>
         </div>
       </div>
@@ -56,4 +59,4 @@ function Portfolio() {
     </div>
   );
 }
-export default Portfolio
+export default Portfolio;

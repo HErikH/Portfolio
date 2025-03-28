@@ -35,6 +35,30 @@ export const portfolioData = [
     text: "(This is a private web page !) The main purpose is to help the Institution create a timetable, if you have a wish to explore this web page contact me",
     img: "/timtable.png",
   },
+  {
+    id: 7,
+    title: "Event and Guest Information Page",
+    text: "A dynamic web page designed to showcase key event details, including event schedules, guest profiles, and other relevant information. Built to provide a clear and organized overview for attendees.",
+    img: "/singlePage.png",
+    url: "https://www.wix.com/app-market/calendar",
+    urlText: "Explore in Wix with Boom calendar",
+  },
+  {
+    id: 8,
+    title: "Ticket Purchase Page",
+    text: "A seamless ticketing system that allows users to buy tickets using various payment methods, register personal details, and apply promo codes for discounts. Upon completion, users receive QR codes for their tickets on-screen and via email for convenient access.",
+    img: "/ticketsMain.png",
+    url: "https://www.wix.com/app-market/calendar",
+    urlText: "Explore in Wix with Boom calendar",
+  },
+  {
+    id: 9,
+    title: "Event Page Builder",
+    text: "A powerful drag-and-drop editor that enables users to create custom event visualization pages with extensive customization options. Users can adjust colors, fonts, layouts, and other design elements to build unique, personalized event pages. Built to offer flexibility and control with a wide range of features for a fully tailored experience.",
+    img: "/editor.png",
+    url: "https://www.wix.com/app-market/calendar",
+    urlText: "Explore in Wix with Boom calendar",
+  },
 ];
 
 export const skillsIcons = [
@@ -55,5 +79,5 @@ export const skillsIcons = [
   "/express.png",
   "/mongoose-logo.png",
   "/mongodb.png",
-  "/github-logo.png"
+  "/github-logo.png",
 ];
