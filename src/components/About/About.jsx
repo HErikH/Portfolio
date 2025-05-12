@@ -33,10 +33,9 @@ function About() {
       >
         Hi I'm Erik Frontend Developer with two years of experience, specializing in<br />
         building user-friendly and scalable web applications. Strong expertise<br />
-        in React and modern frontend technologies, with hands- on experience in<br />
+        in React and modern frontend technologies, with hands-on experience in<br />
         the MERN stack. Passionate about improving UI/UX and creating efficient,<br />
-        maintainable code. Contributed to high-quality projects at BoomTech,<br />
-        refining my skills and expertise in frontend development. <br />
+        maintainable code.
         <br />
       </motion.span>
 
