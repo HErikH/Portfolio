@@ -37,7 +37,7 @@ export const portfolioData = [
   },
   {
     id: 7,
-    title: "Event and Guest Information Page",
+    title: "Event and Guest Information",
     text: "A dynamic web page designed to showcase key event details, including event schedules, guest profiles, and other relevant information. Built to provide a clear and organized overview for attendees.",
     img: "/singlePage.png",
     url: "https://www.wix.com/app-market/calendar",
@@ -45,7 +45,7 @@ export const portfolioData = [
   },
   {
     id: 8,
-    title: "Ticket Purchase Page",
+    title: "Ticket Purchase",
     text: "A seamless ticketing system that allows users to buy tickets using various payment methods, register personal details, and apply promo codes for discounts. Upon completion, users receive QR codes for their tickets on-screen and via email for convenient access.",
     img: "/ticketsMain.png",
     url: "https://www.wix.com/app-market/calendar",
