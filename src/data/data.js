@@ -59,6 +59,12 @@ export const portfolioData = [
     url: "https://www.wix.com/app-market/calendar",
     urlText: "Explore in Wix with Boom calendar",
   },
+  {
+    id: 10,
+    title: "Water Committee of RA MTAI's",
+    img: "/committee.png",
+    url: "https://www.scws.am/"
+  },
 ];
 
 export const skillsIcons = [
