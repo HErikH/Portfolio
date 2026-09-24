@@ -58,33 +58,33 @@ export const portfolioData = [
   },
   {
     id: 9,
-    title: "React Tour",
-    img: "/tour.png",
-    url: "https://magenta-bublanina-57fb67.netlify.app",
-  },
-  {
-    id: 10,
-    title: "React Fitness Exercises",
-    img: "/exercises.png",
-    url: "https://transcendent-pasca-da4816.netlify.app",
-  },
-  {
-    id: 11,
-    title: "React Restaurant",
+    title: "Restaurant",
     img: "/restaurant.png",
     url: "https://chic-shortbread-a2921b.netlify.app",
   },
   {
+    id: 10,
+    title: "Explore Movies",
+    img: "/movies.png",
+    url: "https://courageous-mousse-728b22.netlify.app",
+  },
+  {
+    id: 11,
+    title: "Fitness Exercises",
+    img: "/exercises.png",
+    url: "https://transcendent-pasca-da4816.netlify.app",
+  },
+  {
     id: 12,
-    title: "React Fitness",
+    title: "Fitness",
     img: "/fitness.png",
     url: "https://herikh.github.io/FitnessHeroes/",
   },
   {
     id: 13,
-    title: "React Explore Movies",
-    img: "/movies.png",
-    url: "https://courageous-mousse-728b22.netlify.app",
+    title: "Tour",
+    img: "/tour.png",
+    url: "https://magenta-bublanina-57fb67.netlify.app",
   },
 ];
 
