@@ -31,10 +31,10 @@ function About() {
           duration: 1,
         }}
       >
-        Hi I'm Erik Frontend Developer with two years of experience, specializing in<br />
+        Hi I'm Erik Frontend Developer with three years of experience, specializing in<br />
         building user-friendly and scalable web applications. Strong expertise<br />
         in React and modern frontend technologies, with hands-on experience in<br />
-        the MERN stack. Passionate about improving UI/UX and creating efficient,<br />
+        the in the Full stack. Passionate about improving UI/UX and creating efficient,<br />
         maintainable code.
         <br />
       </motion.span>
