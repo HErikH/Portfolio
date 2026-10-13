@@ -2,12 +2,13 @@ export const portfolioData = [
   {
     id: 1,
     title: "Water Committee of RA MTAI's",
+    text: "The Water Committee of the Republic of Armenia oversees the management, development, and sustainable use of the country's water resources and water infrastructure.",
     img: "/committee.png",
     url: "https://www.scws.am/",
   },
   {
     id: 2,
-    title: "Ultima Lounge — Shopify E-commerce Store",
+    title: "Lounge — Shopify E-commerce Store",
     text: "A modern Shopify e-commerce store specializing in stylish furniture and interior furnishings, including sofas, chairs, tables, and lighting. Designed to showcase contemporary pieces through elegant product displays, curated collections, and a refined visual aesthetic. The responsive layout and intuitive navigation create a seamless shopping experience, helping customers explore furniture and discover pieces that complement their living spaces.",
     img: "/lounge.png",
     url: "https://ultima-lounge.myshopify.com/",
