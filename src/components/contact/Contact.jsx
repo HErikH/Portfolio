@@ -1,11 +1,13 @@
 import { useRef, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
+import { motion, useReducedMotion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import "./style.scss";
 
 function Contact() {
   const formRef = useRef(null);
   const [status, setStatus] = useState("");
+  const reducedMotion = useReducedMotion();
 
   const sendEmail = async (event) => {
     event.preventDefault();
@@ -27,7 +29,13 @@ function Contact() {
 
   return (
     <div className="contact">
-      <div className="contact__copy">
+      <motion.div
+        className="contact__copy"
+        initial={reducedMotion ? false : { opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.25 }}
+        transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+      >
         <p className="eyebrow"><span /> Have a project in mind?</p>
         <h2 className="contact__heading">Let’s make something <span>great.</span></h2>
         <p className="contact__intro">Tell me what you’re working on. I’d love to hear about it.</p>
@@ -43,9 +51,17 @@ function Contact() {
         <a className="contact__cv" href="/ERIK_HARUTYUNYAN_CV.pdf" download>
           Download my CV <FiArrowUpRight aria-hidden="true" />
         </a>
-      </div>
+      </motion.div>
 
-      <form className="contact__form" ref={formRef} onSubmit={sendEmail}>
+      <motion.form
+        className="contact__form"
+        ref={formRef}
+        onSubmit={sendEmail}
+        initial={reducedMotion ? false : { opacity: 0, x: 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.25 }}
+        transition={{ duration: 0.65, delay: reducedMotion ? 0 : 0.12, ease: [0.22, 1, 0.36, 1] }}
+      >
         <label>
           Your name
           <input type="text" required placeholder="Jane Smith" name="name" autoComplete="name" />
@@ -62,7 +78,7 @@ function Contact() {
           Send message <FiArrowUpRight aria-hidden="true" />
         </button>
         <p className="contact__status" aria-live="polite">{status}</p>
-      </form>
+      </motion.form>
     </div>
   );
 }
