@@ -1,36 +1,102 @@
 .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding-top: 1.2rem;
-    width: 100%;
-    height: 100%;
-    .about-me {
-        font-size: 20px;
-        color: gray;
-        overflow: auto;
-    }
-    .skills {
-        padding: 0 1rem;
-        margin-top: 2rem;
-        p {
-            font-size: 24px;
-            color: #17A1E6;
-            margin-bottom: 1rem;
-        }
-        &__icons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            span {
-                color: #17A1E6;
-            }
-            img {
-                width: 70px;
-            }
-        }
-    }
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+  align-items: start;
+  gap: clamp(44px, 9vw, 130px);
+}
+
+.about__intro .eyebrow {
+  margin-bottom: 18px;
+}
+
+.about__intro .sectionHeading {
+  max-width: 610px;
+  font-size: clamp(40px, 5.4vw, 66px);
+}
+
+.about__intro .sectionHeading span {
+  color: #7d9f37;
+}
+
+.about__text {
+  max-width: 590px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about__text--secondary {
+  margin-top: 12px;
+}
+
+.skills {
+  padding-top: 12px;
+}
+
+.skills__heading {
+  padding-bottom: 19px;
+  border-bottom: 1px solid var(--line);
+}
+
+.skills__heading h3 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.skills__heading p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.skills__groups {
+  display: grid;
+  gap: 22px;
+  padding-top: 24px;
+}
+
+.skills__group h4 {
+  margin: 0 0 11px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skills__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: #414a41;
+  background: #f8f8f4;
+  font-size: 12px;
+}
+
+.skill img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
 }

@@ -1,28 +1,30 @@
-import SideBar from '../sidebar/SideBar';
-import { motion } from 'framer-motion'
-import { VscGithub } from "react-icons/vsc";
 import { FaLinkedin } from "react-icons/fa";
-import './style.scss'
+import { VscGithub } from "react-icons/vsc";
+import "./style.scss";
 
 function Navbar() {
   return (
-    <div className='navbar'>
-      <SideBar />
-        <div className="wrapper">
-            <motion.span
-            initial={{opacity: 0, scale: 0.5}}
-            animate={{opacity: 1, scale: 1}}
-            transition={{duration: 0.5}}
-            >
-              ERIK HARUTYUNYAN
-            </motion.span>
-            <div className="social">
-                <a target='_blank' href='https://github.com/HErikH'><VscGithub /></a>
-                <a target='_blank' href='https://www.linkedin.com/in/erik-harutyunyan-2588a9226/'><FaLinkedin /></a>
-            </div>
+    <header className="navbar">
+      <div className="navbar__inner">
+        <a className="navbar__brand" href="#Homepage" aria-label="Erik Harutyunyan, home">
+          EH<span>.</span>
+        </a>
+        <nav className="navbar__links" aria-label="Main navigation">
+          <a href="#Portfolio">Work</a>
+          <a href="#About">About</a>
+          <a href="#Contact">Contact</a>
+        </nav>
+        <div className="navbar__social" aria-label="Social links">
+          <a target="_blank" rel="noreferrer" href="https://github.com/HErikH" aria-label="GitHub">
+            <VscGithub />
+          </a>
+          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/erik-harutyunyan-2588a9226/" aria-label="LinkedIn">
+            <FaLinkedin />
+          </a>
         </div>
-    </div>
-  )
+      </div>
+    </header>
+  );
 }
 
-export default Navbar
+export default Navbar;

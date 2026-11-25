@@ -1,113 +1,136 @@
-@use '../../mixins.scss' as *;
-
 .contact {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(340px, 0.8fr);
+  align-items: start;
+  gap: clamp(48px, 9vw, 130px);
+}
+
+.contact__heading {
+  max-width: 560px;
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 1.04;
+}
+
+.contact__heading span {
+  color: #7d9f37;
+}
+
+.contact__intro {
+  max-width: 390px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.contact__details {
+  display: grid;
+  gap: 0;
+  margin-top: 38px;
+}
+
+.contact__details a,
+.contact__details p {
   display: flex;
   align-items: center;
-  height: 100%;
-  max-width: 1000px;
-  margin: auto;
-  gap: 50px;
-  @include tablet {
-    gap: 35px;
-    padding: 0 50px;
-  }
-  @include mobile {
-    gap: 0;
-    width: 100%;
-    padding: 0 10px;
-    flex-direction: column;
-  }
-  .textContainer {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    @include tablet {
-      justify-content: center;
-      gap: 20px;
-      text-align: center;
-      align-items: center;
-    }
-    @include mobile {
-      margin-top: 50px;
-    }
-    h1 {
-      font-size: 100px;
-      line-height: 88px;
-      @include tablet {
-        font-size: 36px;
-        line-height: 50px;
-      }
-    }
-    span {
-      font-weight: 300;
-    }
-    .cv-download {
-        padding: 20px;
-        border: none;
-        font-size: 15px;
-        color: black;
-        background-color: orange;
-        cursor: pointer;
-        font-weight: 500;
-        @include mobile {
-          padding: 10px;
-        }
-    }
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.contact__details span {
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.contact__details svg {
+  flex-shrink: 0;
+  color: #536d2a;
+}
+
+.contact__cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  color: #536d2a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  padding-top: 5px;
+}
+
+.contact__form label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #4e554f;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.contact__form input,
+.contact__form textarea {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--ink);
+  background: #f9f9f6;
+  font-size: 14px;
+  font-weight: 400;
+  resize: vertical;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  border-color: #91b94a;
+  background: white;
+}
+
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
+  color: #9a9f98;
+}
+
+.contact__form button {
+  align-self: flex-start;
+  min-width: 175px;
+  border: 0;
+  cursor: pointer;
+}
+
+.contact__status {
+  min-height: 1.4em;
+  margin: -10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 42px;
   }
 
-  .formContainer {
-    flex: 1;
-    position: relative;
-    @include mobile {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 50px;
-      width: 100%;
-    }
-    .phoneSvg {
-      stroke: orange;
-      position: absolute;
-      margin: auto;
-      z-index: -1;
-      svg {
-        width: 450px;
-        height: 450px;
-        @include tablet {
-          width: 300px;
-          height: 300px;
-        }
-      }
-    }
-    form {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      input,
-      textarea {
-        padding: 20px;
-        background-color: transparent;
-        border: 1px solid white;
-        color: white;
-        border-radius: 5px;
-        @include tablet {
-          padding: 10px;
-        }
-      }
-      button {
-        padding: 20px;
-        border: none;
-        font-size: 15px;
-        color: black;
-        background-color: orange;
-        cursor: pointer;
-        font-weight: 500;
-        @include mobile {
-          padding: 10px;
-        }
-      }
-    }
+  .contact__form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact__details a,
+  .contact__details p {
+    font-size: 12px;
   }
 }

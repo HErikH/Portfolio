@@ -1,83 +1,34 @@
-import { motion } from "framer-motion";
+import { FiArrowDownRight, FiArrowUpRight } from "react-icons/fi";
 import "./style.scss";
-
-const textVariants = {
-  initial: {
-    x: -500,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
-  scrollButton: {
-    opacity: 0,
-    y: 10,
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-    },
-  },
-};
-
-const sliderVariants = {
-  initial: {
-    x: 0,
-  },
-  animate: {
-    x: "-220%",
-    transition: {
-      repeat: Infinity,
-      repeatType: "mirror",
-      duration: 20,
-    },
-  },
-};
 
 function Hero() {
   return (
     <div className="hero">
-      <div className="wrapper">
-        <motion.div
-          className="textContainer"
-          variants={textVariants}
-          initial="initial"
-          animate="animate"
-        >
-          <motion.h2 variants={textVariants}>ERIK HARUTYUNYAN</motion.h2>
-          <motion.h1 variants={textVariants}>Web developer</motion.h1>
-          <motion.div variants={textVariants} className="buttons">
-            <motion.a href="#Portfolio" variants={textVariants}>
-              See the Latest Works
-            </motion.a>
-            <motion.a href="#Contact" variants={textVariants}>
-              Contact Me
-            </motion.a>
-          </motion.div>
-          <motion.img
-            variants={textVariants}
-            animate="scrollButton"
-            src="/scroll.png"
-            alt=""
-          />
-        </motion.div>
+      <div className="hero__copy">
+        <p className="eyebrow"><span /> Full-Stack Engineer · Yerevan, Armenia</p>
+        <h1>Building thoughtful <span>digital</span> experiences.</h1>
+        <p className="hero__intro">
+          I’m Erik, a full-stack engineer building modern web applications with React, TypeScript, and Node.js.
+        </p>
+        <div className="hero__actions">
+          <a className="button button--dark" href="#Portfolio">
+            Explore my work <FiArrowDownRight aria-hidden="true" />
+          </a>
+          <a className="textLink" href="#Contact">
+            Let’s talk <FiArrowUpRight aria-hidden="true" />
+          </a>
+        </div>
+        <div className="hero__meta">
+          <span>Selected work</span>
+          <span>01 — 16</span>
+        </div>
       </div>
-      <motion.div
-        className="slidingTextContainer"
-        variants={sliderVariants}
-        initial="initial"
-        animate="animate"
-      >
-        WEB DEVELOPER
-      </motion.div>
-      <div className="imageContainer">
-        <img src="/hero.jpeg" alt="" />
+      <div className="hero__portrait">
+        <img src="/hero.jpeg" alt="Portrait of Erik Harutyunyan" />
+        <span className="hero__portraitLabel">Erik Harutyunyan<br />Full-Stack Engineer</span>
       </div>
     </div>
   );
 }
+
 export default Hero;

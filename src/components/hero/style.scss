@@ -1,119 +1,199 @@
-@use '../../mixins.scss' as *;
-
 .hero {
-    position: relative;
-    height: calc(100vh - 100px);
-    overflow: hidden;
-    background: linear-gradient(180deg, #0c0c1d, #111132);
-    .wrapper {
-        max-width: 1000px;
-        height: 100%;
-        margin: auto;
-    }
-    .textContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        gap: 40px;
-        @include tablet {
-          margin-left: 35px;
-          gap: 20px;
-        }
-        @include mobile {
-          margin: 110px 0 0;
-          align-items: center;
-          text-align: center;
-        }
-        h2 {
-          font-size: 30px;
-          color: rebeccapurple;
-          letter-spacing: 10px;
-        }
-        h1 {
-          font-size: 88px;
-          white-space: nowrap;
-          @include tablet {
-            font-size: 60px;
-          }
-          @include mobile {
-            font-size: 36px;
-          }
-        }
-  
-        .buttons {
-          margin-top: 1rem;
-          z-index: 1;
-          a {
-            margin-right: 20px;
-            padding: 20px;
-            border: 1px solid white;
-            border-radius: 10px;
-            background-color: transparent;
-            box-shadow: inset 0 0 0 white;
-            color: white;
-            font-weight: 300;
-            cursor: pointer;
-            &:hover {
-            transition: 0.5s linear;
-            color: black;
-            box-shadow: inset 0 -100px 0 white;
-            }
-          }
-        }
-        img {
-          margin-top: 1rem;
-          width: 50px;
-        }
-      }
-    .imageContainer {
-        position: absolute;
-        display: flex;
-        justify-content: flex-end;
-        width: 45%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        padding-right: 35px;
-        clip-path: circle(40%);
-        @include tablet {
-          width: 40%;
-          padding: 20px;
-          clip-path: circle(33%); 
-        }
-        @include mobile {
-          justify-content: center;
-          width: 70%;
-          height: 50%;
-          top: 25%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          clip-path: circle(30%);
-          padding: 0;
-        }
-        img {
-          max-width: 100%;
-          height: auto;
-          background-color: rgba(0, 0, 0, 0.295);
-          object-fit: contain;
-        }
-      }
-      .slidingTextContainer {
-        position: absolute;
-        width: 50%;
-        top: 200px;
-        font-size: 50vh;
-        white-space: nowrap;
-        color: #ffffff09;
-        font-weight: bold;
-        @include tablet {
-          top: 150px;
-          font-size: 30vh;
-        }
-        @include mobile {
-          top: 300px;
-          font-size: 12vh;
-        }
-      }
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  align-items: center;
+  gap: clamp(44px, 8vw, 120px);
+  min-height: inherit;
+  padding-block: 68px 76px;
+}
+
+.hero__copy {
+  min-width: 0;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.eyebrow span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #83aa37;
+}
+
+.hero h1,
+.sectionHeading,
+.contact__heading {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.075em;
+}
+
+.hero h1 {
+  max-width: 780px;
+  font-size: clamp(58px, 7vw, 100px);
+  line-height: 0.99;
+}
+
+.hero h1 span {
+  color: #7d9f37;
+}
+
+.hero__intro {
+  max-width: 510px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: clamp(16px, 1.5vw, 18px);
+  line-height: 1.7;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 26px;
+  margin-top: 34px;
+}
+
+.button,
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.button {
+  padding: 0 22px;
+  border-radius: 3px;
+}
+
+.button--dark {
+  color: white;
+  background: var(--ink);
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.button--dark:hover {
+  background: #3a4538;
+  transform: translateY(-2px);
+}
+
+.textLink {
+  gap: 7px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero__meta {
+  display: flex;
+  justify-content: space-between;
+  max-width: 440px;
+  margin-top: clamp(50px, 8vw, 100px);
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero__portrait {
+  position: relative;
+  display: grid;
+  align-self: center;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 0.82;
+  margin-inline: auto;
+  place-items: end center;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #e7e9e2;
+  box-shadow: 14px 14px 0 #e5e9db;
+}
+
+.hero__portrait img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.hero__portraitLabel {
+  position: absolute;
+  z-index: 2;
+  right: 12px;
+  bottom: 24px;
+  padding: 13px 16px;
+  color: var(--ink);
+  background: rgb(245 245 240 / 96%);
+  font-size: 11px;
+  line-height: 1.5;
+  box-shadow: 0 8px 24px rgb(28 33 30 / 8%);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.7fr);
+    gap: 32px;
+  }
+
+  .hero h1 {
+    font-size: clamp(54px, 8vw, 76px);
+  }
+
+  .hero__portraitLabel {
+    right: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-block: 54px 60px;
+  }
+
+  .hero h1 {
+    max-width: 550px;
+    font-size: clamp(54px, 13vw, 76px);
+  }
+
+  .hero__intro {
+    margin-top: 22px;
+  }
+
+  .hero__meta {
+    margin-top: 42px;
+  }
+
+  .hero__portrait {
+    width: min(78%, 320px);
+    aspect-ratio: 0.92;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .hero__actions {
+    gap: 18px;
+  }
 }
